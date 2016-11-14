@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Document id="root_doc" xmlns="http://www.opengis.net/kml/2.2">
+  <Folder>
+    <Placemark targetId="1,2,4,9">
+      <name>Calvary Health Care Bethlehem Ltd</name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Calvary Health Care Bethlehem Ltd</td></tr>
+    <tr><td>CAMPUS</td><td>3050</td></tr>
+    <tr><td>Region</td><td>Southern Metro</td></tr>
+    <tr><td>Network_HS</td><td>Calvary Health Care Bethlehem</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>476 Kooyong Road</td></tr>
+    <tr><td>Town</td><td>Caulfield</td></tr>
+    <tr><td>Postcode</td><td>3162</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>145.013082,-37.897105000000003,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="1,2,4">
+      <name>Caulfield General Medical Centre</name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Caulfield General Medical Centre</td></tr>
+    <tr><td>CAMPUS</td><td>1370</td></tr>
+    <tr><td>Region</td><td>Southern Metro</td></tr>
+    <tr><td>Network_HS</td><td>Alfred Health</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>260-294 Kooyong Road</td></tr>
+    <tr><td>Town</td><td>Caulfield</td></tr>
+    <tr><td>Postcode</td><td>3162</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>145.01562999999999,-37.883626,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="12">
+      <name>Dental Health Services Victoria</name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Dental Health Services Victoria</td></tr>
+    <tr><td>CAMPUS</td><td>5110</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>Dental Health Service Victoria</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>720 Swanston Street</td></tr>
+    <tr><td>Town</td><td>Carlton</td></tr>
+    <tr><td>Postcode</td><td>3053</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.96442500000001,-37.799295000000001,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="3">
+      <name>Peter MacCallum Cancer Institute</name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Peter MacCallum Cancer Institute</td></tr>
+    <tr><td>CAMPUS</td><td>1550</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>Peter MacCallum Cancer Institute</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>7 St Andrews Place</td></tr>
+    <tr><td>Town</td><td>East Melbourne</td></tr>
+    <tr><td>Postcode</td><td>3002</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.97768400000001,-37.811934000000001,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="12">
+      <name><![CDATA[Royal Children's Hospital]]></name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Royal Children's Hospital</td></tr>
+    <tr><td>CAMPUS</td><td>1191</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>Royal Childrens Hospital</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>50 Flemington Road</td></tr>
+    <tr><td>Town</td><td>Parkville</td></tr>
+    <tr><td>Postcode</td><td>3052</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.95003600000001,-37.795195999999997,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="12">
+      <name>Royal Melbourne Hospital - City Campus</name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Royal Melbourne Hospital - City Campus</td></tr>
+    <tr><td>CAMPUS</td><td>1334</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>Melbourne Health</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>300 Grattan Street</td></tr>
+    <tr><td>Town</td><td>Parkville</td></tr>
+    <tr><td>Postcode</td><td>3050</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.95567,-37.799309999999998,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="12">
+      <name><![CDATA[Royal Women's Hospital]]></name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Royal Women's Hospital</td></tr>
+    <tr><td>CAMPUS</td><td>1230</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>Royal Womens Hospital</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>132 Grattan Street</td></tr>
+    <tr><td>Town</td><td>Carlton</td></tr>
+    <tr><td>Postcode</td><td>3050</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.95487,-37.798999000000002,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="7,9,10,13">
+      <name><![CDATA[Sandringham & District Memorial Hospital]]></name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Sandringham & District Memorial Hospital</td></tr>
+    <tr><td>CAMPUS</td><td>1360</td></tr>
+    <tr><td>Region</td><td>Southern Metro</td></tr>
+    <tr><td>Network_HS</td><td>Alfred Health</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>193 Bluff Road</td></tr>
+    <tr><td>Town</td><td>Sandringham</td></tr>
+    <tr><td>Postcode</td><td>3191</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>145.01907800000001,-37.960472000000003,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="3,12">
+      <name><![CDATA[St Vincent's Hospital]]></name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>St Vincent's Hospital</td></tr>
+    <tr><td>CAMPUS</td><td>1450</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>St Vincents Health</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>41 Victoria Parade</td></tr>
+    <tr><td>Town</td><td>Fitzroy</td></tr>
+    <tr><td>Postcode</td><td>3065</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.97420299999999,-37.807626999999997,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="1,3,4">
+      <name>The Alfred</name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>The Alfred</td></tr>
+    <tr><td>CAMPUS</td><td>1010</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>Alfred Health</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>75 Commercial Road</td></tr>
+    <tr><td>Town</td><td>Melbourne</td></tr>
+    <tr><td>Postcode</td><td>3004</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.98296300000001,-37.845624999999998,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="3">
+      <name><![CDATA[The Royal Victorian Eye & Ear Hospital]]></name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>The Royal Victorian Eye & Ear Hospital</td></tr>
+    <tr><td>CAMPUS</td><td>1240</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>Royal Victorian Eye & Ear Hospital, The</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>32 Gisborne Street</td></tr>
+    <tr><td>Town</td><td>East Melbourne</td></tr>
+    <tr><td>Postcode</td><td>3002</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.97609499999999,-37.808767000000003,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="12">
+      <name><![CDATA[Tweddle Child & Family Health Service]]></name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Tweddle Child & Family Health Service</td></tr>
+    <tr><td>CAMPUS</td><td>1900</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>Tweddle Child & Family Health Centre</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>53 Adelaide Street</td></tr>
+    <tr><td>Town</td><td>Footscray</td></tr>
+    <tr><td>Postcode</td><td>3011</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.88721000000001,-37.797811000000003,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark targetId="3,5,12">
+      <name>Williamstown Hospital</name>
+      <description><![CDATA[<br><br><br>
+    <table border="1" padding="0">
+    <tr><td>Facility_Name</td><td>Williamstown Hospital</td></tr>
+    <tr><td>CAMPUS</td><td>1460</td></tr>
+    <tr><td>Region</td><td>North-West Metro</td></tr>
+    <tr><td>Network_HS</td><td>Western Health</td></tr>
+    <tr><td>METRORUR</td><td>Metro</td></tr>
+    <tr><td>Address</td><td>Railway Crescent</td></tr>
+    <tr><td>Town</td><td>Williamstown</td></tr>
+    <tr><td>Postcode</td><td>3016</td></tr>]]></description>
+      <Point>
+        <extrude>true</extrude>
+        <altitudeMode>relativeToGround</altitudeMode>
+        <coordinates>144.89246499999999,-37.863173000000003,0</coordinates>
+      </Point>
+    </Placemark>
+  </Folder>
+</Document>

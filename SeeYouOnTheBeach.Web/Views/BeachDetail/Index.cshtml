@@ -1,0 +1,61 @@
+﻿@model SeeYouOnTheBeach.Web.ViewModels.BeachDetailViewModel
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA79OFettcuoATAfL-sxTkOpvaWB2qkxek&libraries=places"></script>
+    @Scripts.Render("~/bundles/beachdetail")
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+</head>
+<div style="padding-top:25px;">
+    <div style="text-align:center;">
+        <div class="col-md-2" id="buttons_container" style="text-align:center; padding-bottom:4%;">
+            <div><button onclick="displayWeather()" class="buttonSide" style="width:80%;">Weather</button></div>
+            <div><button onclick="displayRoute()" class="buttonSide" style="width:80%;">My Route</button></div>
+        </div>
+        <div class="col-md-8" style="text-align:center; padding-bottom:2%;">
+            <div id="mapAndWeatherPannel" class="box effect7"></div>
+        </div>
+        <div class="col-md-2" style="text-align:center;">
+            <div class="weatherBox shadow3" style="color:white; margin:0 0 0 0;">
+                <p class="weatherBorder weatherFont" style="font-size:130%;">
+                    <strong style="font-size:160%; border-bottom:solid;">Current Weather</strong><br />
+                    <strong>Condition: </strong><label id="condition"></label><br />
+                    <strong>Temperature: </strong><label id="temp"></label><strong> ℃</strong><br />
+                    <strong>UV: </strong><label id="uv"></label><strong> Degree</strong><br />
+                    <strong>Humidity: </strong><label id="humidity"></label><br />
+                    <strong>Wind: </strong><label id="wind"></label><strong> kph</strong><br />
+                    <img id="weatherImg" style="width:45px; height:45px;" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        initBeach('@Model.Beach.BeachName', @Model.Beach.Latitude, @Model.Beach.Longitude, '@Model.Beach.Description');
+        initMarker(JSON.parse('@Html.Raw(Model.Sport)'), sports_mark,sports_infowindow,'Sport & Recreation','sports');
+        initMarker(JSON.parse('@Html.Raw(Model.Toilet)'), toilets_mark,toilets_infowindow,'Toilets','toilets');
+        initMarker(JSON.parse('@Html.Raw(Model.Hospital)'), hospitals_mark,hospitals_infowindow,'Hospital','hospitals');
+        initMarker(JSON.parse('@Html.Raw(Model.BikeShare)'), bikeshare_mark,bikeshare_infowindow,'Bike Share','bikeshare');
+        initMarker(JSON.parse('@Html.Raw(Model.Barbecue)'), barbecues_mark,barbecues_infowindow,'Barbecue','barbecues');
+        writeMapDiv();
+        initializeMap(null, null);
+        initWeather(@Html.Raw(@Model.Weather));
+        showCurrentWeather();
+    </script>
+    
+</div>
+<div id="beachDetial" class="col-md-12" style="padding:0 20% 1% 20%;">
+    <div class="detailBox effect7">
+        <div style="margin:2% 2% 2% 2%; padding:2% 2% 2% 2%;">
+            <p class="desc-title-style" style="text-align:center;">@Model.Beach.BeachName</p>
+            <p class="desc-style" style="text-align:left;">@Model.Beach.Description</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12" style="text-align:center;">
+    <button class="button buttonSide" style="vertical-align: middle;"><span>Find People</span></button>
+</div>

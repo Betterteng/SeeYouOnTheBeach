@@ -1,0 +1,218 @@
+﻿@using System.Web.Optimization
+
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <title>Tips</title>
+</head>
+<body>
+    <div style="margin-top:2%;">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="text-align:center;">
+            <div class="col-md-4">
+                <div>
+                    <h1 style="border: gray 2px solid; border-radius: 5px;">General Tips</h1><br/>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading desc-title-style" style="text-align:center;">Beach Safety</div>
+                    <div class="panel-body">
+                        <img src="~/StaticImages/beachsafety.png" style="width:90%;" class="one-edge-shadow" />
+                        <p style="padding-top:2%; text-align:justify;">
+                            <strong>
+                                In Australian waterways in the 12 months to 30 June 2015, 271 lives
+                                 were lost to drowning. Here are some water safety tips for user
+                                 at swimming pool, inland waterways and the beach.
+                            </strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>Need more info? Click <a href="http://www.healthdirect.gov.au/beach-safety" target="_blank">here!</a></strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading desc-title-style" style="text-align:center;">Water Quality</div>
+                    <div class="panel-body">
+                        <img src="~/StaticImages/water-quality.jpg" style="width:90%;" class="one-edge-shadow" />
+                        <p style="padding-top:2%; text-align:justify;">
+                            <strong>
+                                Be aware of all beach closures and advisories when visiting the beach,
+                                because closures or advisories caused by poor water quality can prevent
+                                the visitors from enjoying the beach. Water contaminated by sewage,
+                                storm-water pollution, and other hazardous substances can make beachgoers
+                                very sick. The EPA’s “Beach Report 2015–16 Summer Highlights Report” is
+                                based on Melbourne Water’s weekly water-quality monitoring data from
+                                November 1, 2015, until April 10, 2016, which can be used by the public
+                                to choose the beach from water quality perspective.
+                            </strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>Need more info? Click <a href="http://yarraandbay.vic.gov.au/beach-report" target="_blank">here!</a></strong>
+                        </p>
+                    </div>
+                </div>
+                <div id="generalTipsBtn">
+                    <button onclick="showCol1()" class="buttonSide" style="width: 80%;">Show More on General Tips</button>
+                </div>
+                <div class="panel panel-default" id="rainfallInfo">
+                    <div class="panel-heading desc-title-style" style="text-align:center;">Rainfall Information</div>
+                    <div class="panel-body">
+                        <img src="~/StaticImages/rainfall-min.png" style="width:90%;" class="one-edge-shadow" />
+                        <p style="padding-top:2%; text-align:justify;">
+                            <strong>
+                                Here you will find the latest data from about 160 of Melbourne Water's
+                                field monitoring devices that transmit rainfall and water level readings.
+                                You can see the amount of rain to have fallen in your local area in the
+                                last hour, or check on the stream flow levels of your local creek. Note:
+                                This website commenced on June 1st, 2004. If you require any historical
+                                data for the monitoring sites listed on this web page, please contact
+                                Melbourne Water on 131 722.
+                            </strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>Need more info? Click <a href="http://melbournewater.com.au/waterdata/rainfallandriverleveldata/Pages/rainfall-and-river-level.aspx" target="_blank">here!</a></strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h1 style="border: gray 2px solid; border-radius: 5px;">Safety Issues</h1><br />
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading desc-title-style" style="text-align:center;">Rip Current</div>
+                    <div class="panel-body">
+                        <img src="~/StaticImages/rip-current.JPG" style="width:90%;" class="one-edge-shadow" />
+                        <p style="padding-top:2%; text-align:justify;">
+                            <strong>
+                                As the silent killer of beach that you really need to pay attention to
+                                is Rip Currents. They are powerful, channeled currents of water flowing
+                                away from shore which can quickly pull swimmers out to sea. According
+                                to National Drowning Report Australia 2015, 271 people drowned in Australian
+                                waterways and 17% of cases of beach drowning deaths in the age group among
+                                25 to 50 year-old males were known to involve rip current, 6% occurred outside patrol hours.
+                            </strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>Need more info? Click <a href="https://beachsafe.org.au/surf-ed/ripcurrents" target="_blank">here!</a></strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-danger">
+                    <div class="panel-heading desc-title-style" style="text-align:center;">Jellyfish</div>
+                    <div class="panel-body">
+                        <img src="~/StaticImages/jellyfish.jpg" style="width:90%;" class="one-edge-shadow" />
+                        <p style="padding-top:2%; text-align:justify;">
+                            <strong>
+                                Keep an eye out for jellyfish. Some jellyfish in Australia are harmless, however,
+                                jellyfish sting in Australia can cause death, with there are several venomous species
+                                of jellyfish such as the box jellyfish and Irukandji Jellyfish. The box jellyfish has
+                                up to 60 tentacles, all with millions of tiny harpoons from which the venom is injected.
+                                Their sting is excruciating and can cause rapid death from shock within two to five minutes,
+                                or if the venom plays out, death can occur in 20-30 minutes.
+                            </strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>Need more info? Click <a href="http://www.sunsetbeachclub.com/blog/holiday-tips/travel-tips/jellyfish-stings-what-to-do-and-how-to-avoid-them/" target="_blank">here!</a></strong>
+                        </p>
+                    </div>
+                </div>
+                <div id="safetyBtn">
+                    <button onclick="showCol2()" class="buttonSide" style="width: 80%;">Show More on Safety</button>
+                </div>
+                <div class="panel panel-danger" id="sharkAttack">
+                    <div class="panel-heading desc-title-style" style="text-align:center;">Shark Attacks</div>
+                    <div class="panel-body">
+                        <img src="~/StaticImages/shark.jpg" style="width:90%;" class="one-edge-shadow" />
+                        <p style="padding-top:2%; text-align:justify;">
+                            <strong>
+                                Shark attacks will not only appear in entertainment movie, actually they do
+                                occur in Australian beaches. Shark attacks, though rare, are most likely to
+                                occur near shore. Tiger sharks, Bull sharks, and Grey Nurse sharks are mainly
+                                responsible for the attack for multiple attacks, but most of Great White
+                                attacks are fatal. According to Australian Shark Attack File, there have
+                                been over 1000 shark attacks in Australia since records began in 1791, and 232
+                                of them have been fatal.
+                            </strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>Need more info? Click <a href="https://taronga.org.au/animals-conservation/conservation-science/australian-shark-attack-file/prevention-shark-attacks" target="_blank">here!</a></strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <h1 style="border: gray 2px solid; border-radius: 5px;">Other Issues</h1><br />
+                </div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading desc-title-style" style="text-align:center;">Sunburn</div>
+                    <div class="panel-body">
+                        <img src="~/StaticImages/sunburn.jpg" style="width:90%;" class="one-edge-shadow" />
+                        <p style="padding-top:2%; text-align:justify;">
+                            <strong>
+                                It is safe to say that skin damage from UV radiation is the most common hazard at
+                                Australian beaches. Sunburn is a radiation burn to the skin. The signs of sunburn
+                                can start to appear in less than 15 minutes and skin can turn red within two to
+                                six hours of being burnt. It will continue to develop for the next 24 to 72 hours
+                                and, depending on the severity, can take days or weeks to heal. According to Cancer
+                                Council’s National Sun Protection Survey, in Australia, sunburn can occur within
+                                as little as 15 minutes and cause permanent and irreversible skin damage.
+                            </strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>Need more info? Click <a href="http://www.sunsmart.com.au/uv-sun-protection" target="_blank">here!</a></strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="panel panel-warning">
+                    <div class="panel-heading desc-title-style" style="text-align:center;">Algal Blooms</div>
+                    <div class="panel-body">
+                        <img src="~/StaticImages/AlgalBlooms.png" style="width:90%;" class="one-edge-shadow" />
+                        <p style="padding-top:2%; text-align:justify;">
+                            <strong>
+                                Algae are aquatic plants that are naturally found in our rivers, 
+                                estuaries and bays. Most algae use energy from the sun to grow. 
+                                They are an important part of the aquatic ecosystem providing a 
+                                source of food, habitat and oxygenating water during the daylight hours.
+                            </strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>Need more info? Click <a href="http://yarraandbay.vic.gov.au/issues/algal-blooms" target="_blank">here!</a></strong>
+                        </p>
+                    </div>
+                </div>
+                <div id="otherIssueBtn">
+                    <button onclick="showCol3()" class="buttonSide" style="width: 80%;">Show More on Other Issue</button>
+                </div>
+                <div class="panel panel-warning" id="stormWater">
+                    <div class="panel-heading desc-title-style" style="text-align:center;">Storm Water</div>
+                    <div class="panel-body">
+                        <img src="~/StaticImages/stormWater.png" style="width:90%;" class="one-edge-shadow" />
+                        <p style="padding-top:2%; text-align:justify;">
+                            <strong>
+                                Stormwater is rainwater that runs off hard surfaces and enters 
+                                the drainage system. The drainage system is designed to reduce 
+                                flooding by redirecting the stormwater runoff from our streets
+                                 and gutters into nearby streams, creeks, rivers, estuaries and
+                                 finally the ocean.
+                            </strong>
+                        </p>
+                        <p style="text-align:center;">
+                            <strong>Need more info? Click <a href="http://yarraandbay.vic.gov.au/issues/stormwater" target="_blank">here!</a></strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <script src="~/Scripts/tips.js">
+    </script>
+</body>
+</html>

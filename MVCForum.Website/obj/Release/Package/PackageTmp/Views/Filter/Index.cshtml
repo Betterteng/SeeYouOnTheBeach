@@ -1,0 +1,102 @@
+﻿@using System.Web.Optimization
+@model MVCForum.Website.ViewModels.FilterViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="~/Scripts/float-panel.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Choose You Like</title>
+    @Scripts.Render("~/bundles/filterpage")
+    @Scripts.Render("~/bundles/linq")
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA79OFettcuoATAfL-sxTkOpvaWB2qkxek" async defer></script>
+</head>
+<body>
+    <div>
+        <div class="col-md-3">
+            <div class="floatWrapper" style="float:right;">
+                <div class="float-panel" data-top="50" style="width:300px;">
+                    <div class="weatherBox shadow3" style="margin:12% 0 0 0;">
+                        <div style="padding:0 1% 5% 5%">
+                            <div style="padding-top:30px;">
+                                <p style="font-size:large; color:white;"><strong><u>Let us help you decide..</u></strong></p>
+                            </div>
+                            <div id="filterMenu">
+                                @foreach (var item in Model.BeachFilters)
+                                {
+                                    var checkboxid = $"filterId_{item.BeachFilterId}";
+                                    <input type="checkbox" name="filterGroup" id="@checkboxid" class="css-checkbox" value="@item.BeachFilterId" onchange="checkBoxOnChange()" />
+                                    <label for="@checkboxid" class="css-label" style="color:white;">@item.BeachFilterDescription</label>
+                                    <br />
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 main-content" style="text-align:center; padding-bottom:90px;">
+            @foreach (var item in Model.Beaches)
+            {
+                var beachid = String.Format("beach_{0}", item.BeachId);
+                var beachMapId = String.Format("beach_map_{0}", item.BeachId);
+                <div id="@beachid" class="col-md-12 detailBox effect7 filterSection">
+                    <div style="text-align:center;">
+                        <a href="~/BeachDetail?beachid=@item.BeachId">
+                            <p class="desc-title-style2">@Html.DisplayFor(model => item.BeachName)</p>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="col-md-3">
+                            <a href="~/BeachDetail?beachid=@item.BeachId">
+                                @{
+                                    var content = Model.Photos.SingleOrDefault(p => p.BeachId == item.BeachId)?.Content;
+                                    if (content != null)
+                                    {
+                                        var base64 = Convert.ToBase64String(content);
+                                        var imgSrc = $"data:image/gif;base64,{base64}";
+                                        <img style="width: 90%; height: 150px; padding-bottom: 3%;" src="@imgSrc" />
+                                    }
+                                    else
+                                    {
+                                        <img style="width: 90%; height: 150px; padding-bottom: 3%;" src="" />
+                                    }
+                                }
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="desc-style">@Html.DisplayFor(model => item.Description)</p>
+                            <div style="text-align:left; padding-bottom:3%;">
+                                @foreach (var item2 in item.BeachFeatures)
+                                {
+                                    var featureId = item2.BeachFilterId;
+                                    var source = $"../StaticImages/filter_{featureId}.png";
+                                    <img src="@source" style="width:40px; height:40px; margin-right:2%;" />
+                                }
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div id="@beachMapId" data-lat="@item.Latitude" data-lng="@item.Longitude" style="height:200px;"></div>
+                        </div>
+                    </div>
+                </div>
+                                    }
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+    <script>
+        initFeatures(JSON.parse('@Html.Raw(Model.BeachFeatures)'));
+        initRemainingBeaches();
+        generateMapForFilterPage();
+        checkBoxOnChange();
+    </script>
+</body>
+</html>

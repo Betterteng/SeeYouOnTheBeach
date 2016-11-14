@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MVCForumContext-Web.config Connection String" description="MVCForumContext Connection String used in web.config by the application to access the database." defaultValue="data source=.\Sqlexpress;database=MVCForum;Trusted_Connection=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\FIT5120\\SYOTB\\SeeYouOnTheBeach\\MVCForum\.Website\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MVCForumContext']/@connectionString" />
+  </parameter>
+  <parameter name="PhotoDbContext-Web.config Connection String" description="PhotoDbContext Connection String used in web.config by the application to access the database." defaultValue="data source=.\SQLEXPRESS;initial catalog=SYOTB;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\FIT5120\\SYOTB\\SeeYouOnTheBeach\\MVCForum\.Website\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PhotoDbContext']/@connectionString" />
+  </parameter>
+</parameters>

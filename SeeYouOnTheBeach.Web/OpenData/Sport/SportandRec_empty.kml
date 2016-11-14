@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="OGRGeoJSON" id="OGRGeoJSON">
+	<SimpleField name="OBJECTID" type="int"></SimpleField>
+	<SimpleField name="Facility_ID" type="string"></SimpleField>
+	<SimpleField name="FacilityName" type="string"></SimpleField>
+	<SimpleField name="StreetNo" type="string"></SimpleField>
+	<SimpleField name="StreetName" type="string"></SimpleField>
+	<SimpleField name="StreetType" type="string"></SimpleField>
+	<SimpleField name="SuburbTown" type="string"></SimpleField>
+	<SimpleField name="Postcode" type="string"></SimpleField>
+	<SimpleField name="Latitude" type="float"></SimpleField>
+	<SimpleField name="Longitude" type="float"></SimpleField>
+	<SimpleField name="FaciltySportPlayedID" type="int"></SimpleField>
+	<SimpleField name="SportsPlayed" type="string"></SimpleField>
+	<SimpleField name="NumberFieldCourts" type="string"></SimpleField>
+	<SimpleField name="FieldSurfaceType" type="string"></SimpleField>
+	<SimpleField name="FacilityAge" type="string"></SimpleField>
+	<SimpleField name="FacilityCondition" type="string"></SimpleField>
+	<SimpleField name="FacilityUpgradeAge" type="string"></SimpleField>
+	<SimpleField name="Changerooms" type="string"></SimpleField>
+	<SimpleField name="LGA" type="string"></SimpleField>
+</Schema>
+</Document></kml>

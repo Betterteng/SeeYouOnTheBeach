@@ -1,0 +1,9 @@
+D:\FIT5120\SYOTB\SeeYouOnTheBeach\SeeYouOnTheBeach.WebDb\bin\Debug\SeeYouOnTheBeach.WebDb.dacpac
+D:\FIT5120\SYOTB\SeeYouOnTheBeach\SeeYouOnTheBeach.WebDb\bin\Debug\SeeYouOnTheBeach.WebDb.dll
+D:\FIT5120\SYOTB\SeeYouOnTheBeach\SeeYouOnTheBeach.WebDb\bin\Debug\SeeYouOnTheBeach.WebDb.pdb
+D:\FIT5120\SYOTB\SeeYouOnTheBeach\SeeYouOnTheBeach.WebDb\obj\Debug\Model.xml
+D:\FIT5120\SYOTB\SeeYouOnTheBeach\SeeYouOnTheBeach.WebDb\obj\Debug\refactor.xml
+D:\FIT5120\SYOTB\SeeYouOnTheBeach\SeeYouOnTheBeach.WebDb\obj\Debug\postdeploy.sql
+D:\FIT5120\SYOTB\SeeYouOnTheBeach\SeeYouOnTheBeach.WebDb\obj\Debug\predeploy.sql
+D:\FIT5120\SYOTB\SeeYouOnTheBeach\SeeYouOnTheBeach.WebDb\obj\Debug\SeeYouOnTheBeach.WebDb.dll
+D:\FIT5120\SYOTB\SeeYouOnTheBeach\SeeYouOnTheBeach.WebDb\obj\Debug\SeeYouOnTheBeach.WebDb.pdb

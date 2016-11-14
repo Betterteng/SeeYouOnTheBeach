@@ -1,0 +1,127 @@
+﻿@using System.Web.Optimization
+@model MVCForum.Website.ViewModels.HomeViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<head>
+    <script src="~/Scripts/jssor.slider-21.1.5.mini.js"></script>
+    @Scripts.Render("~/bundles/homepage")
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA79OFettcuoATAfL-sxTkOpvaWB2qkxek"></script>
+</head>
+
+<div style="padding:0px; margin:0px; background-color:#fff;font-family:Arial, sans-serif">
+    <div style="padding: 0px; margin: 0px; background-color: #fff; font-family: Arial, sans-serif">
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 300px; overflow: hidden; visibility: hidden;">
+            <!-- Loading Screen -->
+            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position: absolute; display: block; background: url('../../StaticImages/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            </div>
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+                @foreach (var item in Model.Photos)
+                {
+                    <div data-p="225.50" style="display: none;">
+                        @{
+                            var base64 = Convert.ToBase64String(item.Content);
+                            var imgSrc = $"data:image/gif;base64,{base64}";
+                        }
+                        <img data-u="image" src="@imgSrc" />
+                        @Html.ActionLink(item.Beach.BeachName, "Index", "BeachDetail", new { beachid = item.BeachId }, new { @style = "position: absolute; top: 30px; left: 30px; width: 480px; height: 120px; font-size: 50px; color: #ffffff; line-height: 60px;" })
+                    </div>
+                            }
+            </div>
+            <!-- Arrow Navigator -->
+            <span data-u="arrowleft" class="jssora22l" style="top: 0px; left: 12px; width: 40px; height: 58px;" data-autocenter="2"></span>
+            <span data-u="arrowright" class="jssora22r" style="top: 0px; right: 12px; width: 40px; height: 58px;" data-autocenter="2"></span>
+        </div>
+    </div>
+</div>
+<div id="whatToDo" class="container body-content" style="padding:3% 0 2% 0;">
+    <div style="text-align: center;">
+        <div class="col-md-4">
+            <a href="../Filter/Index">
+                <img src="~/StaticImages/list.png" style="width: 130px; height: 110px;" />
+                <br />
+                <p class="whatToDoDesc" style="color: #337ab7 ">View & Select</p>
+                <br />
+            </a>
+            <p>
+                <strong>
+                    View a list of all the beaches in Melbourne and decide which beach you want to visit based on your interests
+                </strong>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <img src="~/StaticImages/search.png" style="width: 130px; height: 110px;" />
+            <br />
+            <div class="whatToDoDesc dropdown">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                    Explore Beaches
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" id="dropdownmenu">
+                    @if (Model?.Beaches != null)
+                    {
+                        foreach (var item in Model.Beaches)
+                        {
+                            <li>@Html.ActionLink(item.BeachName, "Index", "BeachDetail", new { beachid = item.BeachId }, null)</li>
+                        }
+                    }
+                </ul>
+            </div>
+            <p style="margin-top:10px;">
+                <strong>
+                    Explore a beach of your choice along with its surrounding facilities and let us help you get there
+                </strong>
+            </p>
+        </div>
+        <div class="col-md-4">
+            <a href="../Home/Index">
+                <img src="~/StaticImages/forum.png" style="width: 130px; height: 110px;" />
+                <br />
+                <p class="whatToDoDesc" style="color: #337ab7">Forum Time</p>
+                <br />
+            </a>
+            <p>
+                <strong>
+                    Join the discussion forum to post or answer a query and leave your feedback based on your beach experience
+                </strong>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container body-content" style="padding-bottom:1%;">
+    <br />
+    <div id="generalDesc" style="text-align:center; height: auto;">
+        <div>
+            <p class="desc-title-style" style="text-align:center;">Why visit Melbourne beaches?</p>
+        </div>
+        <div>
+            <p class="desc-style">
+                Melbourne is the perfect destination to spend your summer holidays,
+                effortlessly mixing the buzz of a large city with a cosmopolitan beach
+                culture. With so many things to see and do by the sea, you can make the
+                most of this beach lifestyle with friends and family. Build sandcastles,
+                take a dip, snorkel, dive, play some beach volleyball, run along the sand,
+                take a scenic coastal walk, sunbathe the beachside activities are only limited by your imagination.
+                <br />
+                So what are you waiting for? Let's see you on the beach!
+            </p>
+        </div>
+        <br />
+    </div>
+</div>
+<div class="container body-content" style="padding:0 1% 2% 1%">
+    <div><p class="desc-title-style" style="text-align:center;">Find a beach near you..</p></div>
+    <div id="map" style="height: 400px;"></div>
+    @{
+        <script>
+                initMap(JSON.parse('@Html.Raw(Model.JsonBeaches)'));
+        </script>
+    }
+</div>

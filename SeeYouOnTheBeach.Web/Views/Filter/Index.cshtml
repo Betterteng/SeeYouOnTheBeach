@@ -1,0 +1,77 @@
+﻿@model SeeYouOnTheBeach.Web.ViewModels.FilterViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Choose You Like</title>
+    @Scripts.Render("~/bundles/floatpanel")
+    @Scripts.Render("~/bundles/filterpage")
+    @Scripts.Render("~/bundles/linq")
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8" style="text-align:center; padding-bottom:90px;">
+            @foreach (var item in Model.Beaches)
+            {
+                var beachid = $"beach_{item.BeachId}";
+                <div id="@beachid" class="col-md-12 detailBox effect7 filterSection">
+                    <div style="text-align:center;">
+                        <a href="~/BeachDetail?beachid=@item.BeachId">
+                            <p class="desc-title-style2">@Html.DisplayFor(model => item.BeachName)</p>
+                        </a>
+                    </div>
+                    <div>
+                        <div class="col-md-3">
+                            <a href="~/BeachDetail?beachid=@item.BeachId">
+                                <img style="width:150px; height:150px;" src="" />
+                            </a>
+                        </div>
+                        <div class="col-md-9">
+                            <p class="desc-style">@Html.DisplayFor(model => item.Description)</p>
+                            <div style="text-align:left;">
+                                @foreach (var item2 in item.BeachFeatures) {
+                                    var featureId = item2.BeachFilterId;
+                                    var source = $"../StaticImages/filter_{featureId}.png";
+                                    <img src = "@source" style="width:40px; height:40px; margin-right:2%;"/>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+    <div class="footer" id="filters" style="text-align:center;">
+        <div class="footTitle"><strong>Choose you like</strong></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#filterMenu">
+            <span class="icon-bar" style="background-color: black"></span>
+            <span class="icon-bar" style="background-color: black"></span>
+            <span class="icon-bar" style="background-color: black"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="filterMenu">
+            @foreach (var item in Model.BeachFilters)
+            {
+                var checkboxid = $"filterId_{item.BeachFilterId}";
+            <input type="checkbox" name="filterGroup" id="@checkboxid" class="css-checkbox" value="@item.BeachFilterId" onchange="checkBoxOnChange()" />
+            <label for="@checkboxid" class="css-label">@item.BeachFilterDescription</label>
+            }
+        </div>
+    </div>
+    <script>
+        initFeatures(JSON.parse('@Html.Raw(Model.BeachFeatures)'));
+        initRemainingBeaches();
+    </script>
+</body>
+</html>

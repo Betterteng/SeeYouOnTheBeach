@@ -1,0 +1,131 @@
+﻿@using System.Web.Optimization
+@model MVCForum.Website.ViewModels.BeachDetailViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA79OFettcuoATAfL-sxTkOpvaWB2qkxek&libraries=places"></script>
+    @Scripts.Render("~/bundles/beachdetail")
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+</head>
+<div style="padding-top:25px;">
+    <div style="text-align:center;">
+        <div class="col-md-2" id="buttons_container" style="text-align:center; padding-bottom:4%;">
+            <div><button onclick="displayRoute()" class="buttonSide" style="width: 80%;">My Route</button></div>
+            <br/>
+            <div><button id="weatherBtn" onclick="smoothScroll(document.getElementById('weatherWidget'))" class="buttonSide" style="width: 80%;">Weather</button></div>
+            <br />
+        </div>
+        <div class="col-md-8" style="text-align:center; padding-bottom:2%;">
+            <div id="mapAndWeatherPannel" class="box effect7"></div>
+        </div>
+        <div class="col-md-2" style="text-align:center;">
+            <div class="weatherBox shadow3" style="color:white; margin:0 0 0 0;">
+                <p class="weatherBorder weatherFont" style="font-size:130%;">
+                    <strong style="font-size:160%; border-bottom:solid;">Current Weather</strong><br />
+                    <strong>Condition: </strong><label id="condition"></label><br />
+                    <strong>Temperature: </strong><label id="temp"></label><strong> ℃</strong><br />
+                    <strong>UV: </strong><label id="uv"></label><br />
+                    <label id="suggestion" style="font-size:66%;"></label><br />
+                    <strong>Humidity: </strong><label id="humidity"></label><br />
+                    <strong>Wind: </strong><label id="wind"></label><strong> kph</strong><br />
+                    <img id="weatherImg" style="width:45px; height:45px;" />
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="weatherForMobile" class="col-md-12" style="text-align:center;">
+    <div class="col-md-4">
+        <div class="weatherBox shadow3" style="color:white; margin:0 0 0 0;">
+            <p class="weatherBorder weatherFont" style="font-size:130%;">
+                <strong style="font-size:160%; border-bottom:solid;"><label id="weekday1"></label></strong><br />
+                <strong>Condition: </strong><label id="condition1"></label><br />
+                <strong>Highest: </strong><label id="high1"></label><strong> ℃</strong><br />
+                <strong>Lowest: </strong><label id="low1"></label><strong> ℃</strong><br />
+                <strong>Humidity: </strong><label id="humidity1"></label>%<br />
+                <strong>Wind: </strong><label id="wind1"></label><strong> kph</strong><br />
+                <img id="weatherImg1" style="width:45px; height:45px;" />
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="weatherBox shadow3" style="color:white; margin:0 0 0 0;">
+            <p class="weatherBorder weatherFont" style="font-size:130%;">
+                <strong style="font-size:160%; border-bottom:solid;"><label id="weekday2"></label></strong><br />
+                <strong>Condition: </strong><label id="condition2"></label><br />
+                <strong>Highest: </strong><label id="high2"></label><strong> ℃</strong><br />
+                <strong>Lowest: </strong><label id="low2"></label><strong> ℃</strong><br />
+                <strong>Humidity: </strong><label id="humidity2"></label>%<br />
+                <strong>Wind: </strong><label id="wind2"></label><strong> kph</strong><br />
+                <img id="weatherImg2" style="width:45px; height:45px;" />
+            </p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="weatherBox shadow3" style="color:white; margin:0 0 0 0;">
+            <p class="weatherBorder weatherFont" style="font-size:130%;">
+                <strong style="font-size:160%; border-bottom:solid;"><label id="weekday3"></label></strong><br />
+                <strong>Condition: </strong><label id="condition3"></label><br />
+                <strong>Highest: </strong><label id="high3"></label><strong> ℃</strong><br />
+                <strong>Lowest: </strong><label id="low3"></label><strong> ℃</strong><br />
+                <strong>Humidity: </strong><label id="humidity3"></label>%<br />
+                <strong>Wind: </strong><label id="wind3"></label><strong> kph</strong><br />
+                <img id="weatherImg3" style="width:45px; height:45px;" />
+            </p>
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div id="beachDetial">
+            <div class="detailBox effect7">
+                <div style="margin:2% 2% 2% 2%; padding:2% 2% 2% 2%;">
+                    <p class="desc-title-style" style="text-align:center;"><u>@Model.Beach.BeachName</u></p>
+                    <p class="desc-style" style="text-align:left;">@Model.Beach.Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div style="text-align:center; margin-bottom:1%;">
+    <div class="col-md-12" style="text-align:center;">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div id="weatherWidget" class="detailBox effect7">
+                <div id="cont_2b7242d7c0af88b256c7ec019f44a845">
+                    <script type="text/javascript" async src="https://www.theweather.com/wid_loader/2b7242d7c0af88b256c7ec019f44a845"></script>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="col-md-12">
+        <div style="padding-top:1%;">
+            <button onclick="backToList()" class="buttonSide button" style="vertical-align: middle;">Back to List</button>
+            <button class="button buttonSide" onclick="findPeople()" style="vertical-align: middle;"><span>Find People</span></button>
+        </div>
+    </div>
+</div>
+<script>
+    initBeach('@Model.Beach.BeachName', @Model.Beach.Latitude, @Model.Beach.Longitude, '@Model.Beach.Description');
+    initMarker(JSON.parse('@Html.Raw(Model.Toilet)'), toilets_mark,toilets_infowindow,'Toilets','toilets');
+    initMarker(JSON.parse('@Html.Raw(Model.Sport)'), sports_mark,sports_infowindow,'Sport & Recreation','sports');
+    initMarker(JSON.parse('@Html.Raw(Model.BikeShare)'), bikeshare_mark,bikeshare_infowindow,'Bike Share','bikeshare');
+    initMarker(JSON.parse('@Html.Raw(Model.Barbecue)'), barbecues_mark,barbecues_infowindow,'Barbecue','barbecues');
+    initMarker(JSON.parse('@Html.Raw(Model.Hospital)'), hospitals_mark,hospitals_infowindow,'Hospital','hospitals');
+    writeMapDiv();
+    initializeMap(null, null);
+    initWeather(@Html.Raw(@Model.Weather));
+    showCurrentWeather();
+    weatherForMobile();
+</script>
